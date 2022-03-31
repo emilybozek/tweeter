@@ -7,7 +7,7 @@ $(document).ready(function() {
   const counter = $(".counter");
   $(counter).text(remaining);
   let count = $(this).val().length
-  if (count > maxChar) {
+  if (count > maxTwitterCharCount) {
     $(counter).addClass("counterDanger");
   } else {
     $(counter).removeClass("counterDanger");
