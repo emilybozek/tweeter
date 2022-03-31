@@ -53,7 +53,7 @@ $(".tweet-form").submit(function(event) {
   loadTweets()
 })
 
-// For Initial Tweets
+// For Initial Page
 loadTweets()
 
 });
