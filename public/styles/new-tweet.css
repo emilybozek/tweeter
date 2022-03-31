@@ -1,12 +1,25 @@
-main textarea {
+.new-tweet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.new-tweet textarea {
   border-bottom: 5px solid black;
   border-top: none;
   border-right: none;
+  border-left: none;
   background-color: #f4f1ec;
   resize: none;
 }
 
 main button {
-  
+  font-family:'Bungee', cursive;
+  color: #FFFFFF;
+  background-color: #4056a1;
 }
 
+.submit-div {
+  display: flex;
+  justify-content: space-between;
+}

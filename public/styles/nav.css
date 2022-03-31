@@ -5,21 +5,21 @@ nav {
   height: 120px;
   min-width: 100%;
   background-color: #4056a1;
-  font-family:'Bungee', cursive;
   color: #FFFFFF;
 
 }
 
-.nav-logo{
+nav span {
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0em 1.5em 1.5em 1.5em;
+  font-family:'Bungee', cursive;
 
 }
 
-.nav-text{
+.nav-right {
 
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ nav {
 
 }
 
-.nav-text i {
+.nav-right i {
 
   color: red;
 
