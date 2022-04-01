@@ -39,7 +39,7 @@
 .tweets-container .tweet-footer {
   display: flex;
   justify-content: space-between;
-  border-top: solid #545149;
+  border-top: solid #636059;
   font-weight: 400;
   font-size: small;
   padding: 0.5em;
@@ -50,10 +50,10 @@
 }
 
 .tweets-container .tweet-footer .tweet-actions i {
-  color: #4056A1;
+  color: #4963b9;
 }
 .tweets-container .tweet-footer .tweet-actions i:hover {
-  color: #cf933a;
+  color: #cf3a3a;
 }
 
 .error-message {
