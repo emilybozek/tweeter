@@ -62,8 +62,6 @@ $(document).ready(function() {
     })
     .then(() => {
       loadTweets();
-      $("textarea").val("");
-      $(".counter").val("140");
     });
 
   });
@@ -73,9 +71,11 @@ $(document).ready(function() {
     $.ajax({
       type: "GET",
       url: "/tweets",
-      data: "data"
     })
       .then((data) => {;
+      $("textarea").val("");
+      $(".counter").val("140");
+      $(".tweets-container").empty();
       renderTweets(data);
       });
   };

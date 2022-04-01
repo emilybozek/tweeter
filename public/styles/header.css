@@ -1,13 +1,14 @@
 .site-header {
   display: flex;
   height: 400px;
-  min-width: 100%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   background-color: lightgray;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-.site-header > * {
-  margin: 0.4em;
+.site-header > img {
+  margin-top: 1em;
 }
+

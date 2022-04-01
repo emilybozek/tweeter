@@ -3,26 +3,25 @@ nav {
   justify-content: space-between;
   height: 120px;
   min-width: 100%;
-  background-color: lightgray;
+  background-color: darkgray;
   color: black;
   position: sticky;
   top: 0;
+  padding: 1em;
 }
 
 nav .tweeter {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   font-family:'Bungee', cursive;
-  margin: 0.5em;
 }
 
 nav .nav-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin: 0.5em;
   cursor: pointer;
   font-family: 'Source Sans Pro', sans-serif;
 }
