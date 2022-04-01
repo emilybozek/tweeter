@@ -17,4 +17,7 @@ This repository is the starter code for the project: Students will fork and clon
 - Node 5.10.x or above
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1b12fe19187aee938f54230a9f1adffdcd955e03
