@@ -36,3 +36,8 @@
   font-weight: 600;
 }
 
+
+.new-tweet .counterNegative {
+  color: red;
+}
+

@@ -8,9 +8,9 @@ $(document).ready(function() {
   $(counter).text(remaining);
   let count = $(this).val().length
   if (count > maxTwitterCharCount) {
-    $(counter).addClass("counterDanger");
+    $(counter).addClass("counterNegative");
   } else {
-    $(counter).removeClass("counterDanger");
+    $(counter).removeClass("counterNegative");
   }
   });
  
