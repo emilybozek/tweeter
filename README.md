@@ -13,3 +13,6 @@ A simple, single-page Twitter clone built with HTML, CSS, JS, jQuery and AJAX.
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- Chance
+- MD5
