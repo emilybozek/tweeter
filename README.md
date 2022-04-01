@@ -6,6 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+(https://github.com/feltfan/tweeter/blob/master/public/images/tweeter-header.png?raw=true)
+(https://github.com/feltfan/tweeter/blob/master/public/images/tweets.png?raw=true)
+(https://github.com/feltfan/tweeter/blob/master/public/images/too-long.png?raw=true)
+(https://github.com/feltfan/tweeter/blob/master/public/images/empty.png?raw=true)
 
 
 ## Dependencies
