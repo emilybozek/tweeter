@@ -38,19 +38,18 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <span class="tweeter">tweeter</span>
     <div class="nav-right">
-    <p><strong>Write</strong> a new tweet</p>
+    <a><strong>Write</strong> a new tweet</a>
     <i class="fa-solid fa-angles-down"></i>
     </div> 
   </nav>
 
   <!-- Header content -->
-  <header>
+  <header class="site-header">
         <img src="/images/profile-hex.png"> 
-    <br>
         <h2>Emily Chao</h2>
-</header>
+  </header>
 
   <!-- Page-specific (main) content here -->
   <main>
@@ -58,7 +57,7 @@
       <!-- <h2>Compose Tweet</h2> -->
       <form class="tweet-form" method="Post" action="/tweets">
         <!-- <label for="tweet-text">What are you humming about?</label> -->
-        <textarea placeholder= "What are you humming about?" name="text" id="tweet-text"></textarea>
+        <textarea placeholder= "What are you humming about?" name="text"></textarea>
         <div class = "button-properties">
         <button type="submit">Tweet</button>
         <output name="counter" class="counter" id="counter" for="tweet-text">140</output>

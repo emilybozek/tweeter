@@ -30,10 +30,10 @@
   padding: 0.5em;
 }
 
-
 .tweets .tweet-body {
   font-weight: 400;
   overflow-wrap: break-word;
+  margin: 1em;
 }
 
 .tweets-container .tweet-footer {

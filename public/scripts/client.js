@@ -32,12 +32,11 @@ const renderTweets = function (tweets) {
   });
 };
 
-// Remove Error Message Function
+// Remove Error Message 
 const remove = function(el) {
   let element = el;
   element.remove();
 }
-
 
 $(document).ready(function() {
 
