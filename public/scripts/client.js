@@ -1,41 +1,3 @@
-$(document).ready(function() {
-  // Submit Handler
-  $(".tweet-form").on('submit', function(event) {
-    event.preventDefault();
-    console.log($(this).serialize());
-    if ($("#tweet-text").val().length === '') {
-      return showToastError(toastError("Tweet cannot be empty!"));
-    }
-    if ($(".counter").val() < 0) {
-      return showToastError(toastError(`Tweet cannot exceed ${MAX_TWITTER_CHAR_COUNT} characters!`));
-    }
-    $.ajax( { 
-      method: 'POST',
-      url: "/tweets",
-      data: $(this).serialize()
-    })
-    .then(() => {
-      loadTweets();
-    });
-  });
-  // Loader
-  const loadTweets = function() {
-    $.ajax({
-      type: "GET",
-      url: "/tweets",
-      data: "data"
-    })
-      .then((data) => {
-      // $("#tweet-input").val('');
-      // $(".counter").val('140');
-      // $(".tweets-container").empty();
-      renderTweets(data);
-      });
-  };
-    loadTweets();
-  });
-  
-
 // Element Creator
 const createTweetElement = function(tweet) {
   let $tweet = `
@@ -70,23 +32,53 @@ const renderTweets = function (tweets) {
   });
 };
 
- const toastError = (errorMessage) => {
-  return $(`
-  <section class="toast-error" data-id="toast-error">
-    <i class="fa-solid fa-circle-exclamation toast-content" id="error-icon"></i>
-    <div class="error-message toast-content"><strong>Error: </strong>${errorMessage}</div>
-    <i class="fa-solid fa-xmark toast-content" id="error-close" data-id="error-close"></i>
-  </section>
-  `);
-};
+// Remove Error Message Function
+const remove = function(el) {
+  let element = el;
+  element.remove();
+}
 
-const showToastError = (toastError) => {
-  if ($(dataTags.error).length > 0) {
-    return;
-  }
-  $(dataTags.nav).append(toastError);
-  $(dataTags.errorClose).on('click', function(event) {
+
+$(document).ready(function() {
+
+  // Submit Handler
+  $(".tweet-form").on('submit', function(event) {
     event.preventDefault();
-    $(dataTags.error).remove();
+    if ($("#tweet-text").val().length === 0) {
+      $(".new-tweet").prepend('<p class="error-message">Tweet cannot be empty!</p>')
+      return $(".tweet-form").on('click', function(event) {
+        remove($(".error-message"))
+      });
+    }
+    if ($(".counter").val() < 0) {
+      $(".new-tweet").prepend('<p class="error-message">Tweet is too long!</p>')
+      return $(".tweet-form").on('click', function(event) {
+        remove($(".error-message"))
+      });
+    }
+    $.ajax( { 
+      method: 'POST',
+      url: "/tweets",
+      data: $(this).serialize()
+    })
+    .then(() => {
+      loadTweets();
+    });
+
   });
-};
+  
+  // Loader
+  const loadTweets = function() {
+    $.ajax({
+      type: "GET",
+      url: "/tweets",
+      data: "data"
+    })
+      .then((data) => {;
+      renderTweets(data);
+      });
+  };
+    loadTweets();
+    
+});
+  

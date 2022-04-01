@@ -11,14 +11,20 @@
 }
 
 .tweets-container .profile {
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
   background-color:  #f4f1ec;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: fit-content
 }
 
-.tweets-container .tweet-body {
-  padding: 1em .5em 1em .5em;
+.tweets-container .picture-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.tweets .tweet-body {
+  border-style: solid;
   font-weight: 400;
   overflow-wrap: break-word;
 }
@@ -29,7 +35,6 @@
   border-top: solid #545149;
   font-weight: 400;
   font-size: small;
-  padding: .6em;
 }
 
 .tweets-container .tweet-footer .tweet-actions {
@@ -38,8 +43,14 @@
 
 .tweets-container .tweet-footer .tweet-actions i {
   color: #4056A1;
-  padding: 3px;
 }
 .tweets-container .tweet-footer .tweet-actions i:hover {
   color: #cf933a;
+}
+
+.error-message {
+  color: red;
+  border-style: solid;
+  border-color: red;
+  padding: 0.5em;
 }
