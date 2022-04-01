@@ -1,13 +1,8 @@
 
 .tweet {
-  display: flex;
-  flex-direction: column;
   border: solid #545149;
   margin: 1em;
   padding: .3em;
-  background-color: white;
-  box-shadow: none;
-  animation: outOfHover 0.2s ease;
 }
 
 .tweet:hover {
@@ -17,8 +12,9 @@
 
 .tweets-container .profile {
   display: flex;
+  flex-direction: row;
+  align-items: space-between;
   background-color:  #f4f1ec;
-  border-style: solid;
 }
 
 .tweets-container .tweet-body {
